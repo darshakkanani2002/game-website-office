@@ -47,6 +47,30 @@ export default function QuizAnalysis() {
       <div className="question-bg">
         <div className="container-fluid">
           <div className="row">
+            <div className="container-fluid">
+              <div className="row pt-4">
+                <div className="col-12">
+                  <div className="text-center">
+                    <h3>View Your Quiz Result</h3>
+                  </div>
+                </div>
+                <div className="col-12">
+                  <div>
+                    <div
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-around',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div style={{ width: '45%' }}>
+                        <Doughnut data={data} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="col-12 text-center pt-4">
               <div>
                 <h5 className='mb-0'>
@@ -59,30 +83,6 @@ export default function QuizAnalysis() {
                   alt="rule-img"
                   className="img-fluid"
                 />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="container-fluid">
-          <div className="row pt-4">
-            <div className="col-12">
-              <div className="text-center">
-                <h3>View Your Quiz Result</h3>
-              </div>
-            </div>
-            <div className="col-12">
-              <div>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                    alignItems: 'center',
-                  }}
-                >
-                  <div style={{ width: '45%' }}>
-                    <Doughnut data={data} />
-                  </div>
-                </div>
               </div>
             </div>
           </div>
