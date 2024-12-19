@@ -72,7 +72,7 @@ export default function Quiz() {
   const current = renderQuestion();
 
   return (
-    <div>
+    <div className="content-padding pb-0">
       {loading ? (
         <div>Loading...</div>
       ) : current ? (

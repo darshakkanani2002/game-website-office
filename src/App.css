@@ -34,6 +34,7 @@ a {
   width: 35.4%;
   background-color: #ffede7;
   z-index: 999;
+  min-width: 680px;
 }
 
 .navbar-coins {
@@ -159,6 +160,7 @@ a {
 .fade-out {
   animation: fadeOut 1s ease-in-out;
 }
+
 
 @keyframes fadeIn {
   from {
@@ -286,6 +288,10 @@ a {
   padding: 5px 11px;
   display: inline-block;
   border-radius: 8px;
+}
+
+.nav-tabs-position {
+  top: 95px;
 }
 
 .text-how-to-play {
@@ -618,10 +624,14 @@ a {
   background-color: #FF4600 !important;
   border: 1px solid #FF4600 !important;
 }
-.quize-tournament-live-img{
+
+.quize-tournament-live-img {
   width: 20px;
 }
 
+.story-margin {
+  margin-top: 105px;
+}
 
 ::-webkit-scrollbar {
   width: 0.1px;

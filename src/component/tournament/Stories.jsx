@@ -39,13 +39,13 @@ export default function Stories() {
     }, [selectedCategory]);
 
     return (
-        <div className="content-padding">
+        <div className="">
             <div className="background-height-bg overflow-auto">
                 <div>
                     <div className="container-fluid">
                         <div className="row align-items-start">
                             {/* Sidebar with category buttons */}
-                            <div className="col-4 position-sticky top-0 ps-1 pe-1 py-2 bg-white">
+                            <div className="col-4 position-sticky ps-1 pe-1 py-2 bg-white nav-tabs-position">
                                 <div className="">
                                     <div
                                         className="nav flex-column nav-pills me-3"
@@ -78,7 +78,7 @@ export default function Stories() {
 
 
                             {/* Stories content */}
-                            <div className="col-8">
+                            <div className="col-8 story-margin">
                                 <div
                                     className="tab-content"
                                     id="v-pills-tabContent"
