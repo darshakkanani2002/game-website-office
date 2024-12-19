@@ -92,7 +92,7 @@ export default function Stories() {
                                         <div className="row">
                                             {stories.map((story) => (
                                                 <div className="col-12 mb-3" key={story._id}>
-                                                    <Link to={`/story`}>
+                                                    <Link to={`/newstory`}>
                                                         <div>
                                                             <img
                                                                 crossOrigin="anonymous"

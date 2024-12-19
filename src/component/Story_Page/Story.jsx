@@ -30,7 +30,7 @@ const Story = () => {
   // Update progress bar width
   const onAutoplayTimeLeft = (swiper, time, progress) => {
     if (progressBarRef.current) {
-      const progressWidth = progress * 100; // Calculate width percentage
+      const progressWidth = progress * 50; // Calculate width percentage
       progressBarRef.current.style.width = `${progressWidth}%`; // Set width dynamically
       progressBarRef.current.style.right = `${100 - progressWidth}%`; // Adjust the position for right-to-left
     }
@@ -81,6 +81,7 @@ const Story = () => {
 
         {/* Caption for the Active Slide */}
         <div
+          className="d-none"
           style={{
             position: "absolute",
             bottom: "20px",
@@ -94,28 +95,29 @@ const Story = () => {
             fontWeight: "bold",
             color: "#333",
             zIndex: 1,
-
           }}
         >
           <p style={{ margin: 0 }}>{images[activeIndex].caption}</p>
         </div>
 
         {/* Progress Bar */}
-        <div
-          ref={progressBarRef}
-          style={{
-            position: "absolute",
-            top: "50px",
-            right: 0, // Start from the right
-            width: "0%", // Start with 0% width
-            height: "5px",
-            backgroundColor: "orange",
-            transition: "width 0.1s linear, right 0.1s linear", // Smoothly animate both width and position
-          }}
-        />
+        <div className="d-flex justify-content-center m-auto">
+          <div
+            ref={progressBarRef}
+            style={{
+              position: "absolute",
+              top: "103px",
+              left: 0, // Start from the right
+              width: "0%", // Start with 0% width
+              height: "5px",
+              backgroundColor: "orange",
+              transition: "width 0.1s linear, right 0.1s linear", // Smoothly animate both width and position
+              zIndex: "9999"
+            }}
+          />
+        </div>
       </div>
     </div>
-
   );
 };
 

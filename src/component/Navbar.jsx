@@ -50,7 +50,7 @@ export default function Navbar() {
                     </div>
                 </div>
             ) : (
-                <div className="bg-white py-4 navigationbar position-fixed top-0 w-100">
+                <div className="bg-white py-4 navigationbar position-fixed top-0">
                     <div className="d-flex justify-content-between">
                         <div>
                             <Link to="/" className="logo">GamecWebs</Link>
