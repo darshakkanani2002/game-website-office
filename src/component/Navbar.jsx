@@ -8,14 +8,28 @@ export default function Navbar() {
     const coins = useSelector((state) => state.coins.value);
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        const updatedCoins = parseInt(location.state?.coins || sessionStorage.getItem("coins"), 10) || 0;
-        dispatch(setCoins(updatedCoins));
-    }, [location.state, dispatch]);
+    // Function to get coins from location state or session storage
+    const getUpdatedCoins = () => {
+        return parseInt(location.state?.coins || sessionStorage.getItem("coins"), 10) || 0;
+    };
 
+    // Update coins when location state changes or URL is revisited
+    useEffect(() => {
+        const updatedCoins = getUpdatedCoins();
+        if (updatedCoins !== coins) {
+            dispatch(setCoins(updatedCoins));
+        }
+    }, [location.key, coins, dispatch]); // Add location.key to track even same URL reload
+
+    // Save coins in session storage and local storage
     useEffect(() => {
         if (coins > 0) {
             sessionStorage.setItem("coins", coins);
+        }
+
+        // Save to local storage if coins reach 900
+        if (coins === 900) {
+            localStorage.setItem("coins", coins);
         }
     }, [coins]);
 
@@ -24,7 +38,7 @@ export default function Navbar() {
     return (
         <div>
             {isSpecialRoute ? (
-                <div className="bg-white py-4 navigationbar mb-2">
+                <div className="py-4 navigationbar mb-2 position-fixed top-0 px-2">
                     <div className="d-flex justify-content-between">
                         <div>
                             <Link to="/" className="logo">GamecWebs</Link>
@@ -36,7 +50,7 @@ export default function Navbar() {
                     </div>
                 </div>
             ) : (
-                <div className="bg-white py-4 navigationbar">
+                <div className="bg-white py-4 navigationbar position-fixed top-0 w-100">
                     <div className="d-flex justify-content-between">
                         <div>
                             <Link to="/" className="logo">GamecWebs</Link>

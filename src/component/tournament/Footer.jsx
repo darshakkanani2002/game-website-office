@@ -10,7 +10,7 @@ export default function Footer() {
     return (
         <div>
             <div className='container-game position-fixed w-100 bottom-0 footer-shadow'>
-                <div className='row'>
+                <div className='d-flex'>
                     <div className='col-4 text-center px-0'>
                         <Link to='/tournament'>
                             <div className={`fotter-img-txt-bg py-2 ${isActive('/tournament')}`}>

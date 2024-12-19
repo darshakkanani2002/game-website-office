@@ -1,20 +1,20 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
+import { Modal, Button } from "react-bootstrap"; // Using React Bootstrap for modal
 import { Img_Url, Test_API } from "../Config";
 
 export default function Rules() {
     const [images, setImagesData] = useState([]);
     const { id } = useParams(); // Get the ID from the URL parameter
     const [currentBalance, setCurrentBalance] = useState(0);
+    const [showModal, setShowModal] = useState(false); // State for modal visibility
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Retrieve the current balance from session storage
         const savedCoins = parseInt(sessionStorage.getItem("coins"), 10) || 900; // Default balance: 900
         setCurrentBalance(savedCoins);
 
-        // Fetch quiz data
         fetchData();
     }, [id]);
 
@@ -44,15 +44,22 @@ export default function Rules() {
             setCurrentBalance(updatedBalance);
             sessionStorage.setItem("coins", updatedBalance);
             alert(`Tournament started! ${entryFee} coins have been deducted.`);
-            navigate(`/questions/${id}`); // Redirect to the quiz
+            navigate(`/questions/${id}`);
         } else {
-            alert("Insufficient coins to join this tournament.");
+            setShowModal(true); // Show the modal
+        }
+    };
+
+    const handleCloseModal = (redirectToGame = false) => {
+        setShowModal(false); // Close the modal
+        if (redirectToGame) {
+            navigate("/game"); // Redirect to the "game" route
         }
     };
 
     return (
-        <div>
-            <div className="question-bg">
+        <div className="content-padding pb-0">
+            <div className="background-height-bg overflow-auto">
                 <div className="pt-4">
                     <div className="container-fluid">
                         {images
@@ -106,7 +113,7 @@ export default function Rules() {
 
                     <div className="container">
                         <div className="col-12 text-center mt-4">
-                            <h5>
+                            <h5 className="mb-4">
                                 Tap below to start playing this tournament. The entry fee will be
                                 deducted from your wallet when you tap below.
                             </h5>
@@ -143,6 +150,24 @@ export default function Rules() {
                     </div>
                 </div>
             </div>
+
+            {/* Modal for insufficient coins */}
+            <Modal show={showModal} onHide={() => handleCloseModal(false)} centered>
+                <Modal.Header closeButton>
+                    <Modal.Title>Insufficient Coins</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>You do not have enough coins to join this tournament. Please earn or purchase more coins to participate.</p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => handleCloseModal(false)}>
+                        Close
+                    </Button>
+                    <Button className="earn-coin-modal-btn" onClick={() => handleCloseModal(true)}>
+                        Earn Coins
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     );
 }

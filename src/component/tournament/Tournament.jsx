@@ -62,8 +62,8 @@ export default function Tournament() {
                                                 className='img-fluid mb-1 border border-1 border-dark rounded'
                                             />
                                             <div className='tournament-lve-text text-center'>
-                                                <p className='mb-0 pb-1 px-3 '>
-                                                    Live <br /><span>({liveUsers[item._id] || 1} Users)</span>
+                                                <p className='mb-0 pb-1 px-3 d-flex align-items-center'>
+                                                    <span><img src="../../../public/img/live.gif" alt="live" className='img-fluid quize-tournament-live-img' /> </span> <br /> <span>{liveUsers[item._id] || 1}</span>
                                                 </p>
                                             </div>
                                         </div>
