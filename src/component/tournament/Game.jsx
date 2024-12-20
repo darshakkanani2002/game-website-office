@@ -27,7 +27,7 @@ export default function Game() {
                                                 <span className='fw-semibold'>Merge Block</span>
                                             </div>
                                             <div>
-                                                <Link to='/' className='game-play-btn py-2 px-3 rounded-pill'>Play</Link>
+                                                <a href='http://localhost/adventure-drivers' className='game-play-btn py-2 px-3 rounded-pill'>Play</a>
                                             </div>
                                         </div>
                                     </div>

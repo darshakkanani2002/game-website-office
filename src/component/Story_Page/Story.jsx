@@ -1,124 +1,71 @@
-import React, { useRef, useState } from "react";
-import { FaTimes, FaShareAlt } from "react-icons/fa";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-cards";
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const Story = () => {
-  const progressBarRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-  const images = [
-    {
-      url: "../../../public/img/movie-img-01.png",
-      caption: "The Infinix Hot 50 is a smartphone with sleek design...",
-      storyname: "story-1",
-    },
-    {
-      url: "../../../public/img/movie-img-02.png",
-      caption: "This is the second image in the slider.",
-      storyname: "story-2",
-    },
-    {
-      url: "../../../public/img/movie-img-03.png",
-      caption: "Another caption for the third image.",
-      storyname: "story-3",
-    },
-  ];
+// import './styles.css';
 
-  // Update progress bar width
-  const onAutoplayTimeLeft = (swiper, time, progress) => {
-    if (progressBarRef.current) {
-      const progressWidth = progress * 50; // Calculate width percentage
-      progressBarRef.current.style.width = `${progressWidth}%`; // Set width dynamically
-      progressBarRef.current.style.right = `${100 - progressWidth}%`; // Adjust the position for right-to-left
-    }
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+export default function Story() {
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
-
   return (
-    <div className="background-height-bg overflow-auto d-flex align-items-center">
-      <div style={{ position: "relative", width: "90%", margin: "auto" }}>
-        {/* Header with close and share buttons */}
-        <div className="story-close-btn" style={{ display: "flex", justifyContent: "space-between", padding: "10px" }}>
-          <button style={{ background: "none", border: "none" }}>
-            <FaTimes size={24} color="orange" />
-          </button>
-          <span style={{ fontWeight: "bold", color: "black" }}>
-            {images[activeIndex].storyname}
-          </span>
-          <button style={{ background: "none", border: "none" }}>
-            <FaShareAlt size={24} color="orange" />
-          </button>
-        </div>
-
-        {/* Swiper Component */}
-        <div className="text-center d-flex justify-content-center">
-          <Swiper
-            effect="cards"
-            loop={true}
-            grabCursor
-            autoplay={{
-              delay: 5000, // 5 seconds per slide
-              disableOnInteraction: false,
-            }}
-            modules={[EffectCards, Autoplay]}
-            className="mySwiper"
-            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)} // Update active index
-            onAutoplayTimeLeft={onAutoplayTimeLeft}
-          >
-            {images.map((image, index) => (
-              <SwiperSlide key={index} className="story-slider">
-                <img
-                  src={image.url}
-                  alt={`slide-${index}`}
-                  className="img-fluid w-100 slider-img"
-                />
+    <>
+      <div className='content-padding'>
+        <div className='row justify-content-center'>
+          <div className='col-8'>
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Autoplay, Pagination, Navigation]}
+              onAutoplayTimeLeft={onAutoplayTimeLeft}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img src="../../../public/img/all-game-img-01.png" alt="all-game-img-01" className='img-fluid' />
               </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-
-        {/* Caption for the Active Slide */}
-        <div
-          className="d-none"
-          style={{
-            position: "absolute",
-            bottom: "20px",
-            left: "10%",
-            right: "10%",
-            margin: "auto",
-            backgroundColor: "#ffe4c4",
-            padding: "10px",
-            borderRadius: "10px",
-            textAlign: "center",
-            fontWeight: "bold",
-            color: "#333",
-            zIndex: 1,
-          }}
-        >
-          <p style={{ margin: 0 }}>{images[activeIndex].caption}</p>
-        </div>
-
-        {/* Progress Bar */}
-        <div className="d-flex justify-content-center m-auto">
-          <div
-            ref={progressBarRef}
-            style={{
-              position: "absolute",
-              top: "103px",
-              left: 0, // Start from the right
-              width: "0%", // Start with 0% width
-              height: "5px",
-              backgroundColor: "orange",
-              transition: "width 0.1s linear, right 0.1s linear", // Smoothly animate both width and position
-              zIndex: "9999"
-            }}
-          />
+              <SwiperSlide>
+                <img src="../../../public/img/all-game-img-02.png" alt="all-game-img-02" className='img-fluid' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="../../../public/img/all-game-img-03.png" alt="all-game-img-03" className='img-fluid' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="../../../public/img/all-game-img-04.png" alt="all-game-img-04" className='img-fluid' />
+              </SwiperSlide>
+              <SwiperSlide>Slide 5</SwiperSlide>
+              <SwiperSlide>Slide 6</SwiperSlide>
+              <SwiperSlide>Slide 7</SwiperSlide>
+              <SwiperSlide>Slide 8</SwiperSlide>
+              <SwiperSlide>Slide 9</SwiperSlide>
+              <div className="autoplay-progress" slot="container-end">
+                {/* <svg viewBox="0 0 48 48" ref={progressCircle}>
+                  <circle cx="24" cy="24" r="20"></circle>
+                </svg> */}
+                <span ref={progressContent}></span>
+              </div>
+            </Swiper>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
-};
-
-export default Story;
+}
