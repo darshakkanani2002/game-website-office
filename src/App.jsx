@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import './App.css';
@@ -15,34 +15,19 @@ import Game from './component/tournament/Game';
 import store from './component/Redux/store';
 
 function App() {
-  const [redirectToTournament, setRedirectToTournament] = useState(false);
-
   useEffect(() => {
-    // Check session storage for the "firstVisit" flag
-    const isFirstVisit = sessionStorage.getItem('firstVisit');
-    if (!isFirstVisit) {
-      sessionStorage.setItem('firstVisit', 'true');
-    } else {
-      setRedirectToTournament(true);
-    }
+    // Optionally clear specific keys in sessionStorage if necessary
+    sessionStorage.removeItem('specificKey');
   }, []);
 
   return (
-    <div className="container-game">
+    <div className='container-game'>
       <Provider store={store}>
         <Router>
           <Navbar />
           <Routes>
-            <Route
-              path="/"
-              element={
-                redirectToTournament ? (
-                  <Navigate to="/tournament" replace />
-                ) : (
-                  <Quiz />
-                )
-              }
-            />
+            {/* Define all routes */}
+            <Route path="/" element={<Quiz />} />
             <Route path="/congrasulation" element={<Congrasulation />} />
             <Route path="/tournament" element={<Tournament />} />
             <Route path="/story" element={<Story />} />
@@ -51,6 +36,7 @@ function App() {
             <Route path="/questions/:id" element={<Questions />} />
             <Route path="/quiz-analysis" element={<QuizAnalysis />} />
             <Route path="/game" element={<Game />} />
+            {/* Fallback route to handle undefined paths */}
             <Route path="*" element={<Navigate to="/tournament" />} />
           </Routes>
         </Router>
