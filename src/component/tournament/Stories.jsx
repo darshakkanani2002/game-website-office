@@ -39,7 +39,7 @@ export default function Stories() {
     }, [selectedCategory]);
 
     return (
-        <div className="">
+        <div>
             <div className="background-height-bg overflow-auto">
                 <div>
                     <div className="container-fluid">

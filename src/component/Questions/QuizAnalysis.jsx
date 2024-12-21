@@ -31,7 +31,7 @@ export default function QuizAnalysis() {
   }, [location]);
 
   const data = {
-    labels: ['Wrong', 'Correct', 'Skipped'],
+    // labels: ['Wrong', 'Correct', 'Skipped'],
     datasets: [
       {
         label: 'Quiz Result',
@@ -69,6 +69,22 @@ export default function QuizAnalysis() {
                     </div>
                   </div>
                 </div>
+                <div className='col-lg-4 text-center'>
+                  <div className='bg-success rounded-1'>
+                    <p className='mb-0 py-2'>correct</p>
+                  </div>
+                </div>
+                <div className='col-lg-4 text-center'>
+                  <div className='bg-danger rounded-1'>
+                    <p className='mb-0 py-2'>correct</p>
+                  </div>
+                </div>
+
+                <div className='col-lg-4 text-center'>
+                  <div className='bg-danger rounded-1'>
+                    <p className='mb-0 py-2'>correct</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="col-12 text-center pt-4">
@@ -91,15 +107,15 @@ export default function QuizAnalysis() {
           <div className="row justify-content-center">
             <div className="col-4 text-center">
               <div className="score-text py-3">
-                <p className="fw-semibold mb-0">Your Score: {quizData.correct}</p>
-                <p className="fw-semibold mb-0">Correct Answers: {quizData.correct}</p>
+                <p className="fw-semibold mb-0 text-black">Your Score: {quizData.correct}</p>
+                <p className="fw-semibold mb-0 text-black">Correct Answers: {quizData.correct}</p>
               </div>
             </div>
 
             <div className="col-4 text-center">
               <div className="score-text py-3">
-                <p className="fw-semibold mb-0">Your Score: {quizData.wrong}</p>
-                <p className="fw-semibold mb-0">Wrong Answers: {quizData.wrong}</p>
+                <p className="fw-semibold mb-0 text-black">Your Score: {quizData.wrong}</p>
+                <p className="fw-semibold mb-0 text-black">Wrong Answers: {quizData.wrong}</p>
               </div>
             </div>
           </div>

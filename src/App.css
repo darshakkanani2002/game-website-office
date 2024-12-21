@@ -292,6 +292,7 @@ a {
 
 .nav-tabs-position {
   top: 95px;
+  margin-top: 96px;
 }
 
 .text-how-to-play {
@@ -499,7 +500,7 @@ a {
 
 .swiper {
   width: 380px;
-  /* height: 400px; */
+  height: 450px;
   margin: 45px;
   border-radius: 15px;
 }
@@ -705,3 +706,78 @@ a {
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 } */
+
+/* .swiper-button-prev {
+  background-color: #000000;
+}
+
+.swiper-button-next {
+  background-color: #000000;
+} */
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: '' !important;
+  background-image: url('../public/img/skip-previous.png') !important;
+  background-repeat: no-repeat;
+}
+
+.autoplay-progress {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.autoplay-progress svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.autoplay-progress span {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.swiper-pagination-bullet {
+  background: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FF4600 !important;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.navigationbar {
+  /* background-color: inherit; */
+  color: inherit;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-toggle-btn img {
+  width: 24px;
+  height: 24px;
+}

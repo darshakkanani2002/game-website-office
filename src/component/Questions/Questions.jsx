@@ -155,7 +155,7 @@ export default function Questions() {
                         </div>
                         <div className="col-12 text-center mt-4 question-txt-shadow">
                             <div className="questions-bg py-3">
-                                <h3>{currentQuestion.vQuestion}</h3>
+                                <h3 className="text-black">{currentQuestion.vQuestion}</h3>
                             </div>
                         </div>
                     </div>
@@ -191,7 +191,7 @@ export default function Questions() {
                                     onClick={() => timeLeft > 0 && !selectedAnswer && handleAnswerClick(optionText)}
                                     style={{ cursor: "pointer" }}
                                 >
-                                    <div className={`question-answer-sec py-3 ${answerClass}`}>
+                                    <div className={`question-answer-sec py-3 text-black ${answerClass}`}>
                                         <h5 className="mb-0">{optionText}</h5>
                                     </div>
                                     <div className={`answers-text py-2 ${answerAlpha}`}>
