@@ -54,7 +54,7 @@ export default function QuizAnalysis() {
                     <h3>View Your Quiz Result</h3>
                   </div>
                 </div>
-                <div className="col-12">
+                <div className="col-12 mb-4">
                   <div>
                     <div
                       style={{
@@ -69,20 +69,21 @@ export default function QuizAnalysis() {
                     </div>
                   </div>
                 </div>
-                <div className='col-lg-4 text-center'>
-                  <div className='bg-success rounded-1'>
-                    <p className='mb-0 py-2'>correct</p>
+                <div className='d-flex justify-content-center gap-2'>
+                  <div className='col-lg-4 text-center mb-lg-0 mb-md-0 mb-sm-0 mb-3'>
+                    <div className='rounded-1 correct-answer d-inline-block'>
+                      <p className='mb-0 py-2 px-5'>Correct</p>
+                    </div>
                   </div>
-                </div>
-                <div className='col-lg-4 text-center'>
-                  <div className='bg-danger rounded-1'>
-                    <p className='mb-0 py-2'>correct</p>
+                  <div className='col-lg-4 text-center mb-lg-0 mb-md-0 mb-sm-0 mb-3'>
+                    <div className='rounded-1 wrong-answer d-inline-block'>
+                      <p className='mb-0 py-2 px-5'>Wrong</p>
+                    </div>
                   </div>
-                </div>
-
-                <div className='col-lg-4 text-center'>
-                  <div className='bg-danger rounded-1'>
-                    <p className='mb-0 py-2'>correct</p>
+                  <div className='col-lg-4 text-center mb-lg-0 mb-md-0 mb-sm-0 mb-3'>
+                    <div className='rounded-1 skipped-answer d-inline-block'>
+                      <p className='mb-0 py-2 px-5'>Skipped</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -97,7 +98,7 @@ export default function QuizAnalysis() {
                 <img
                   src="../../../public/img/rule-img.png"
                   alt="rule-img"
-                  className="img-fluid"
+                  className="img-fluid quiz-game-rule-img"
                 />
               </div>
             </div>

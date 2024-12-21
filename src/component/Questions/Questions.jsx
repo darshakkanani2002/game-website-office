@@ -135,11 +135,11 @@ export default function Questions() {
                     {/* Quiz Header */}
                     <div className="d-flex justify-content-end">
                         <div className="timer-box d-flex align-items-center">
-                            <div className="question-quize-time h6">
+                            <div className="question-quize-time h6 text-black">
                                 Quiz<br />time
                             </div>
                             <div className={`timer-circle quize-timer ${timeLeft <= 10 ? "warning" : ""}`}>
-                                <h6 className="timer-text mb-0">{timeLeft}</h6>
+                                <h6 className="timer-text mb-0 text-black">{timeLeft}</h6>
                             </div>
                         </div>
                     </div>

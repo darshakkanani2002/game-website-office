@@ -90,7 +90,7 @@ export default function Rules() {
                                         </h6>
                                         <div className="view-rank-sec">
                                             <div className="d-flex align-items-center">
-                                                <p className="mb-0 pt-2 fw-bold me-1">View Rank</p>
+                                                <p className="mb-0 pt-2 fw-bold me-1 text-black">View Rank</p>
                                                 <img
                                                     src={item.rankIconUrl}
                                                     alt={`rule-rank-ic-${index}`}
@@ -120,8 +120,8 @@ export default function Rules() {
                         </div>
                         <div className="col-12 pb-4">
                             <div className="tournament-rule-box p-4">
-                                <h2 className="tournament-rule-text">Tournament Rules</h2>
-                                <ul className="tournament-rule-list">
+                                <h2 className="tournament-rule-text text-black">Tournament Rules</h2>
+                                <ul className="tournament-rule-list text-black">
                                     <li className="mb-2 fw-semibold">
                                         You'll get 90 seconds to answer as many questions as you can
                                         (Max 25 questions).

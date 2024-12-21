@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link, useLocation } from 'react-router-dom';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -25,7 +26,7 @@ export default function Story() {
       <div className='content-padding pb-0'>
         <div className="background-height-bg overflow-hidden">
           <div className="row justify-content-center">
-            <div className="col-8">
+            <div className="col-8 position-relative">
               <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -81,7 +82,19 @@ export default function Story() {
                   <span ref={progressContent}></span>
                 </div>
               </Swiper>
+
+              <div className='story-back-icon'>
+                <Link to='/stories'>
+                  <button className='story-back-btn'>
+                    <img src="../../../public/img/backward.gif" alt="backward" className='img-fluid story-back-gif' />
+                  </button>
+                </Link>
+              </div>
             </div>
+
+            {/* <div className='col-12 text-center'>
+
+            </div> */}
           </div>
         </div>
       </div>
