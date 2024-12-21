@@ -28,6 +28,7 @@ export default function Story() {
           <div className="row justify-content-center">
             <div className="col-8 position-relative">
               <Swiper
+                className="mySwiper position-relative"
                 spaceBetween={30}
                 centeredSlides={true}
                 loop={true}
@@ -41,7 +42,6 @@ export default function Story() {
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
-                className="mySwiper"
               >
                 <SwiperSlide>
                   <img src="../../../public/img/all-game-img-01.png" alt="all-game-img-01" className="img-fluid" />
@@ -81,15 +81,14 @@ export default function Story() {
                   </svg>
                   <span ref={progressContent}></span>
                 </div>
+                <div className='story-back-icon'>
+                  <Link to='/stories'>
+                    <button className='story-back-btn'>
+                      <img src="../../../public/img/backward.gif" alt="backward" className='img-fluid story-back-gif' />
+                    </button>
+                  </Link>
+                </div>
               </Swiper>
-
-              <div className='story-back-icon'>
-                <Link to='/stories'>
-                  <button className='story-back-btn'>
-                    <img src="../../../public/img/backward.gif" alt="backward" className='img-fluid story-back-gif' />
-                  </button>
-                </Link>
-              </div>
             </div>
 
             {/* <div className='col-12 text-center'>
