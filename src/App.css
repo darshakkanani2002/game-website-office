@@ -15,7 +15,7 @@
 
 .content-padding {
   padding-bottom: 55px;
-  padding-top: 90px;
+  padding-top: 58px;
 }
 
 .w-52 {
@@ -55,7 +55,7 @@ a {
 .logo {
   text-decoration: none;
   color: #000;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
 }
 
@@ -240,7 +240,7 @@ a {
 }
 
 .fotter-img-txt-bg img {
-  width: 37px;
+  width: 27px;
   /* Adjust image size */
   height: auto;
   margin-bottom: 5px;
@@ -292,8 +292,8 @@ a {
 }
 
 .nav-tabs-position {
-  top: 95px;
-  margin-top: 96px;
+  top: 64px;
+  margin-top: 64px;
 }
 
 .text-how-to-play {
@@ -404,14 +404,14 @@ a {
 }
 
 .all-game-img {
-  border-radius: 28px;
+  border-radius: 10px;
   height: 176px !important;
 }
 
 .game-name-btn {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(2.9194130897521973px);
-  border-radius: 0px 0px 18px 18px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .game-name-plate {
@@ -501,7 +501,7 @@ a {
 
 .swiper {
   width: 380px;
-  height: 550px;
+  height: 465px;
   margin: 45px;
   border-radius: 15px;
 }
@@ -632,7 +632,7 @@ a {
 }
 
 .story-margin {
-  margin-top: 105px;
+  margin-top: 80px;
 }
 
 ::-webkit-scrollbar {

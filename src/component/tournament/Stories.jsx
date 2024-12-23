@@ -25,7 +25,7 @@ export default function Stories() {
     useEffect(() => {
         const fetchStories = async () => {
             try {
-                const payload = { vCatId: selectedCategory === "all" ? 'all' : selectedCategory };
+                const payload = { vCatId: selectedCategory === "all" ? '' : selectedCategory };
                 const response = await axios.post(`${Test_API}story/list`, payload);
 
                 console.log("story data ==>", response.data.data);
@@ -92,7 +92,7 @@ export default function Stories() {
                                         <div className="row">
                                             {stories.map((story) => (
                                                 <div className="col-12 mb-3" key={story._id}>
-                                                    <Link to={`/newstory`}>
+                                                    <Link to={`/story`}>
                                                         <div>
                                                             <img
                                                                 crossOrigin="anonymous"

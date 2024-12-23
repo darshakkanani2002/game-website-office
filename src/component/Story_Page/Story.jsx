@@ -26,7 +26,7 @@ export default function Story() {
       <div className='content-padding pb-0'>
         <div className="background-height-bg overflow-hidden">
           <div className="row justify-content-center">
-            <div className="col-8 position-relative">
+            <div className="col-7 position-relative">
               <Swiper
                 className="mySwiper position-relative"
                 spaceBetween={30}

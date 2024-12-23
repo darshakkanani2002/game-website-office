@@ -54,7 +54,7 @@ export default function Navbar() {
     return (
         <div>
             {isSpecialRoute ? (
-                <div className="py-4 navigationbar mb-2 position-fixed top-0 px-2">
+                <div className="py-2  navigationbar mb-2 position-fixed top-0 px-2">
                     <div className="d-flex justify-content-between align-items-center">
                         <div>
                             <Link to="/" className="logo">GamecWebs</Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
                     </div>
                 </div>
             ) : (
-                <div className="py-4 navigationbar position-fixed top-0 px-2">
+                <div className="py-2 navigationbar position-fixed top-0 px-2">
                     <div className="d-flex justify-content-between align-items-center">
                         <div>
                             <Link to="/" className="logo">GamecWebs</Link>

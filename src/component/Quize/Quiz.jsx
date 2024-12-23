@@ -78,7 +78,7 @@ export default function Quiz() {
       ) : current ? (
         <div className="background-height-bg overflow-auto">
           <div>
-            <div className="text-center pt-5 question-text">
+            <div className="text-center pt-4 question-text">
               <h2 className="fw-bold">Let’s start with your Fantastic Brain</h2>
               <h3>Answer these Simple Questions</h3>
               <h2 className="coins-text">Get 100 Coins</h2>

@@ -22,12 +22,12 @@ export default function Game() {
                                 <div className='position-relative'>
                                     <img src="../../../public/img/all-game-img-01.png" alt="all-game-img-01" className='img-fluid all-game-img' />
                                     <div className='game-name-plate'>
-                                        <div className='d-flex align-items-center justify-content-between game-name-btn py-3 px-2'>
+                                        <div className='d-flex align-items-center justify-content-between game-name-btn py-2 px-2'>
                                             <div>
-                                                <span className='fw-semibold'>Merge Block</span>
+                                                <span className='fw-semibold text-black'>Merge Block</span>
                                             </div>
                                             <div>
-                                                <a href='http://localhost/adventure-drivers' className='game-play-btn py-2 px-3 rounded-pill'>Play</a>
+                                                <a href='http://localhost/adventure-drivers' className='game-play-btn py-1 px-2 rounded-pill fs-6'>Play</a>
                                             </div>
                                         </div>
                                     </div>
@@ -38,12 +38,12 @@ export default function Game() {
                                 <div className='position-relative'>
                                     <img src="../../../public/img/all-game-img-02.png" alt="all-game-img-02" className='img-fluid all-game-img' />
                                     <div className='game-name-plate'>
-                                        <div className='d-flex align-items-center justify-content-between game-name-btn py-3 px-2'>
+                                        <div className='d-flex align-items-center justify-content-between game-name-btn py-2 px-2'>
                                             <div>
-                                                <span className='fw-semibold'>Sling Tomb</span>
+                                                <span className='fw-semibold text-black'>Sling Tomb</span>
                                             </div>
                                             <div>
-                                                <Link to='/' className='game-play-btn py-2 px-3 rounded-pill'>Play</Link>
+                                                <Link to='/' className='game-play-btn py-1 px-2 rounded-pill fs-6'>Play</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -54,12 +54,12 @@ export default function Game() {
                                 <div className='position-relative'>
                                     <img src="../../../public/img/all-game-img-03.png" alt="all-game-img-03" className='img-fluid all-game-img' />
                                     <div className='game-name-plate'>
-                                        <div className='d-flex align-items-center justify-content-between game-name-btn py-3 px-2'>
+                                        <div className='d-flex align-items-center justify-content-between game-name-btn py-2 px-2'>
                                             <div>
-                                                <span className='fw-semibold'>Sling Tomb</span>
+                                                <span className='fw-semibold text-black'>Sling Tomb</span>
                                             </div>
                                             <div>
-                                                <Link to='/' className='game-play-btn py-2 px-3 rounded-pill'>Play</Link>
+                                                <Link to='/' className='game-play-btn py-1 px-2 rounded-pill fs-6'>Play</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -70,12 +70,12 @@ export default function Game() {
                                 <div className='position-relative'>
                                     <img src="../../../public/img/all-game-img-04.png" alt="all-game-img-04" className='img-fluid all-game-img' />
                                     <div className='game-name-plate'>
-                                        <div className='d-flex align-items-center justify-content-between game-name-btn py-3 px-2'>
+                                        <div className='d-flex align-items-center justify-content-between game-name-btn py-2 px-2'>
                                             <div>
-                                                <span className='fw-semibold'>Sling Tomb</span>
+                                                <span className='fw-semibold text-black'>Sling Tomb</span>
                                             </div>
                                             <div>
-                                                <Link to='/' className='game-play-btn py-2 px-3 rounded-pill'>Play</Link>
+                                                <Link to='/' className='game-play-btn py-1 px-2 rounded-pill fs-6'>Play</Link>
                                             </div>
                                         </div>
                                     </div>
