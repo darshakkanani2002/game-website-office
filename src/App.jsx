@@ -24,7 +24,7 @@ function App() {
             <Route path='/' element={<Quiz></Quiz>}></Route>
             <Route path='/congrasulation' element={<Congrasulation></Congrasulation>}></Route>
             <Route path='/tournament' element={<Tournament></Tournament>}></Route>
-            <Route path='/story' element={<Story></Story>}></Route>
+            <Route path='/story/:vCatId' element={<Story></Story>}></Route>
             <Route path='/stories' element={<Stories></Stories>}></Route>
             <Route path="/rule/:id" element={<Rules></Rules>}></Route>
             <Route path='/questions/:id' element={<Questions></Questions>}></Route>

@@ -154,10 +154,10 @@ export default function Rules() {
             {/* Modal for insufficient coins */}
             <Modal show={showModal} onHide={() => handleCloseModal(false)} centered>
                 <Modal.Header closeButton>
-                    <Modal.Title>Insufficient Coins</Modal.Title>
+                    <Modal.Title className="text-black">Insufficient Coins</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p>You do not have enough coins to join this tournament. Please earn or purchase more coins to participate.</p>
+                    <p className="text-black">You do not have enough coins to join this tournament. Please earn or purchase more coins to participate.</p>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => handleCloseModal(false)}>

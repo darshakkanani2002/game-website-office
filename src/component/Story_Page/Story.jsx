@@ -1,103 +1,136 @@
-import React, { useRef } from 'react';
-// Import Swiper React components
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Link, useLocation } from 'react-router-dom';
-
-// Import Swiper styles
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-// Import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import axios from 'axios';
+import { Img_Url, Test_API } from '../Config';
 
 export default function Story() {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
+  const swiperRef = useRef(null);  // Ref for the swiper instance
+  const navigate = useNavigate();
 
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    // Update the progress bar
+  const [images, setImages] = useState([]);
+  const { vCatId } = useParams();  // Get vCatId from the URL
+
+  const onAutoplayTimeLeft = (swiper, time, progress) => {
     progressCircle.current.style.setProperty('--progress', 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
 
+  // Fetch story data when vCatId changes
+  useEffect(() => {
+    if (vCatId) {
+      fetchData(vCatId);
+    }
+  }, [vCatId]);
+
+  const fetchData = async (vCatId) => {
+    try {
+      const payload = { vCatId };
+      const response = await axios.post(`${Test_API}story/list`, payload);
+      const imageData = response.data.data;
+      setImages(imageData);
+    } catch (error) {
+      console.error("Error fetching story data:", error);
+    }
+  };
+
+  const handleBackButtonClick = () => {
+    navigate('/stories');
+  };
+
+  // Initialize swiper instance safely using onSwiper callback
+  const handleSwiperInit = (swiperInstance) => {
+    if (swiperInstance.autoplay) {
+      swiperInstance.autoplay.stop();  // Stop autoplay before restarting it
+      swiperInstance.autoplay.start();  // Restart autoplay
+    }
+  };
+
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.autoplay.start();  // Ensure autoplay is restarted after image load
+    }
+  }, [images]);  // Trigger after images are fetched and updated
+
   return (
-    <>
-      <div className='content-padding pb-0'>
-        <div className="background-height-bg overflow-hidden">
-          <div className="row justify-content-center">
-            <div className="col-7 position-relative">
-              <Swiper
-                className="mySwiper position-relative"
-                spaceBetween={30}
-                centeredSlides={true}
-                loop={true}
-                autoplay={{
-                  delay: 5000, // Set delay time (5 seconds per slide)
-                  disableOnInteraction: false,
-                }}
-                pagination={{
-                  clickable: true,
-                }}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                onAutoplayTimeLeft={onAutoplayTimeLeft}
-              >
-                <SwiperSlide>
-                  <img src="../../../public/img/all-game-img-01.png" alt="all-game-img-01" className="img-fluid" />
+    <div className='content-padding pb-0'>
+      <div className="background-height-bg overflow-hidden">
+        <div className="row justify-content-center">
+          <div className="col-7 position-relative">
+            <Swiper
+              ref={swiperRef}  // Attach Swiper reference
+              key={vCatId}  // Ensure Swiper is reinitialized when vCatId changes
+              className="mySwiper position-relative"
+              spaceBetween={30}
+              centeredSlides={true}
+              loop={true}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Autoplay, Pagination, Navigation]}
+              onAutoplayTimeLeft={onAutoplayTimeLeft}
+              onSwiper={handleSwiperInit}  // Ensure swiper instance is initialized correctly
+            >
+              {images.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    crossOrigin="anonymous"
+                    src={`${Img_Url}${image.vImage}`}
+                    alt={`story-${index}`}
+                    className="img-fluid"
+                  />
                 </SwiperSlide>
-                <SwiperSlide>
-                  <img src="../../../public/img/all-game-img-02.png" alt="all-game-img-02" className="img-fluid" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="../../../public/img/all-game-img-03.png" alt="all-game-img-03" className="img-fluid" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="../../../public/img/all-game-img-04.png" alt="all-game-img-04" className="img-fluid" />
-                </SwiperSlide>
-                <div className="autoplay-progress" slot="container-end">
-                  <svg viewBox="0 0 36 36" ref={progressCircle}>
-                    <circle
-                      cx="18"
-                      cy="18"
-                      r="16"
-                      fill="none"
-                      stroke="#ccc"
-                      strokeWidth="4"
-                    ></circle>
-                    <circle
-                      cx="18"
-                      cy="18"
-                      r="16"
-                      fill="none"
-                      stroke="#FF4600"
-                      strokeWidth="4"
-                      strokeDasharray="100"
-                      strokeDashoffset="100"
-                      style={{
-                        strokeDashoffset: 'calc(100 * var(--progress))',
-                      }}
-                    ></circle>
-                  </svg>
-                  <span ref={progressContent}></span>
-                </div>
-                <div className='story-back-icon'>
-                  <Link to='/stories'>
-                    <button className='story-back-btn'>
-                      <img src="../../../public/img/backward.gif" alt="backward" className='img-fluid story-back-gif' />
-                    </button>
-                  </Link>
-                </div>
-              </Swiper>
-
-            </div>
-
-            {/* <div className='col-12 text-center'>
-
-            </div> */}
+              ))}
+              <div className="autoplay-progress" slot="container-end">
+                <svg viewBox="0 0 36 36" ref={progressCircle}>
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="16"
+                    fill="none"
+                    stroke="#ccc"
+                    strokeWidth="4"
+                  ></circle>
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="16"
+                    fill="none"
+                    stroke="#FF4600"
+                    strokeWidth="4"
+                    strokeDasharray="100"
+                    strokeDashoffset="100"
+                    style={{
+                      strokeDashoffset: 'calc(100 * var(--progress))',
+                    }}
+                  ></circle>
+                </svg>
+                <span ref={progressContent}></span>
+              </div>
+              <div className='story-back-icon'>
+                <button className='story-back-btn' onClick={handleBackButtonClick}>
+                  <img
+                    src="../../../public/img/backward.gif"
+                    alt="backward"
+                    className='img-fluid story-back-gif'
+                  />
+                </button>
+              </div>
+            </Swiper>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
