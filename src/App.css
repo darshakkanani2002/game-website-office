@@ -423,6 +423,7 @@ a {
 .game-play-btn {
   background-color: #FF4600;
   color: #fff;
+  font-size: 10px;
 }
 
 .game-name-btn span {

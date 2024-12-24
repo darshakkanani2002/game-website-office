@@ -27,7 +27,7 @@ export default function Game() {
                                                 <span className='fw-semibold text-black'>Merge Block</span>
                                             </div>
                                             <div>
-                                                <a href='http://localhost/adventure-drivers' className='game-play-btn py-1 px-2 rounded-pill fs-6'>Play</a>
+                                                <a href='http://localhost/adventure-drivers' className='game-play-btn py-1 px-2 rounded-pill'>Play</a>
                                             </div>
                                         </div>
                                     </div>
@@ -43,7 +43,7 @@ export default function Game() {
                                                 <span className='fw-semibold text-black'>Sling Tomb</span>
                                             </div>
                                             <div>
-                                                <Link to='http://localhost/aladin-magic-sloat/' className='game-play-btn py-1 px-2 rounded-pill fs-6'>Play</Link>
+                                                <Link to='http://localhost/aladin-magic-sloat/' className='game-play-btn py-1 px-2 rounded-pill'>Play</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -59,7 +59,7 @@ export default function Game() {
                                                 <span className='fw-semibold text-black'>Sling Tomb</span>
                                             </div>
                                             <div>
-                                                <Link to='http://localhost/ball-jump/' className='game-play-btn py-1 px-2 rounded-pill fs-6'>Play</Link>
+                                                <Link to='http://localhost/ball-jump/' className='game-play-btn py-1 px-2 rounded-pill'>Play</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@ export default function Game() {
                                                 <span className='fw-semibold text-black'>Sling Tomb</span>
                                             </div>
                                             <div>
-                                                <Link to='http://localhost/bike-rush/' className='game-play-btn py-1 px-2 rounded-pill fs-6'>Play</Link>
+                                                <Link to='http://localhost/bike-rush/' className='game-play-btn py-1 px-2 rounded-pill'>Play</Link>
                                             </div>
                                         </div>
                                     </div>
