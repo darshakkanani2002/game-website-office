@@ -11,15 +11,19 @@ import { Img_Url, Test_API } from '../Config';
 export default function Story() {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
-  const swiperRef = useRef(null);  // Ref for the swiper instance
+  const swiperRef = useRef(null); // Ref for the Swiper instance
   const navigate = useNavigate();
 
   const [images, setImages] = useState([]);
-  const { vCatId } = useParams();  // Get vCatId from the URL
+  const { vCatId } = useParams(); // Get vCatId from the URL
 
   const onAutoplayTimeLeft = (swiper, time, progress) => {
-    progressCircle.current.style.setProperty('--progress', 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    if (progressCircle.current) {
+      progressCircle.current.style.setProperty('--progress', 1 - progress);
+    }
+    if (progressContent.current) {
+      progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    }
   };
 
   // Fetch story data when vCatId changes
@@ -36,7 +40,7 @@ export default function Story() {
       const imageData = response.data.data;
       setImages(imageData);
     } catch (error) {
-      console.error("Error fetching story data:", error);
+      console.error('Error fetching story data:', error);
     }
   };
 
@@ -44,28 +48,21 @@ export default function Story() {
     navigate('/stories');
   };
 
-  // Initialize swiper instance safely using onSwiper callback
-  const handleSwiperInit = (swiperInstance) => {
-    if (swiperInstance.autoplay) {
-      swiperInstance.autoplay.stop();  // Stop autoplay before restarting it
-      swiperInstance.autoplay.start();  // Restart autoplay
-    }
-  };
-
+  // Restart autoplay when images are updated or when Swiper is re-initialized
   useEffect(() => {
     if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.autoplay.start();  // Ensure autoplay is restarted after image load
+      swiperRef.current.swiper.autoplay.start();
     }
-  }, [images]);  // Trigger after images are fetched and updated
+  }, [images]);
 
   return (
-    <div className='content-padding pb-0'>
+    <div className="content-padding pb-0">
       <div className="background-height-bg overflow-hidden">
         <div className="row justify-content-center">
           <div className="col-7 position-relative">
             <Swiper
-              ref={swiperRef}  // Attach Swiper reference
-              key={vCatId}  // Ensure Swiper is reinitialized when vCatId changes
+              ref={swiperRef} // Attach Swiper reference
+              key={vCatId} // Ensure Swiper is reinitialized when vCatId changes
               className="mySwiper position-relative"
               spaceBetween={30}
               centeredSlides={true}
@@ -80,7 +77,6 @@ export default function Story() {
               navigation={true}
               modules={[Autoplay, Pagination, Navigation]}
               onAutoplayTimeLeft={onAutoplayTimeLeft}
-              onSwiper={handleSwiperInit}  // Ensure swiper instance is initialized correctly
             >
               {images.map((image, index) => (
                 <SwiperSlide key={index}>
@@ -118,12 +114,12 @@ export default function Story() {
                 </svg>
                 <span ref={progressContent}></span>
               </div>
-              <div className='story-back-icon'>
-                <button className='story-back-btn' onClick={handleBackButtonClick}>
+              <div className="story-back-icon">
+                <button className="story-back-btn" onClick={handleBackButtonClick}>
                   <img
                     src="../../../public/img/backward.gif"
                     alt="backward"
-                    className='img-fluid story-back-gif'
+                    className="img-fluid story-back-gif"
                   />
                 </button>
               </div>

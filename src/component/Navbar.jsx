@@ -10,8 +10,8 @@ export default function Navbar() {
 
     // State for dark/light mode
     const [isDarkMode, setIsDarkMode] = useState(() => {
-        // Retrieve theme from localStorage or default to light mode
-        return localStorage.getItem("theme") === "dark";
+        const savedTheme = localStorage.getItem("theme");
+        return savedTheme ? savedTheme === "dark" : true;
     });
 
     // Function to toggle theme
@@ -25,27 +25,31 @@ export default function Navbar() {
         localStorage.setItem("theme", isDarkMode ? "dark" : "light");
     }, [isDarkMode]);
 
-    // Function to get coins from location state or session storage
+    // Function to get coins from session storage or local storage
     const getUpdatedCoins = () => {
-        return parseInt(location.state?.coins || sessionStorage.getItem("coins"), 10) || 0;
+        const storedCoins = sessionStorage.getItem("coins") || localStorage.getItem("coins");
+        return parseInt(storedCoins, 10) || 0;
     };
 
-    // Update coins when location state changes or URL is revisited
+    // Initialize or update coins when location changes
     useEffect(() => {
         const updatedCoins = getUpdatedCoins();
-        if (updatedCoins !== coins) {
+
+        // If on the Tournament page for the first time, set coins to 900
+        if (location.pathname === "/tournament" && updatedCoins === 0) {
+            sessionStorage.setItem("coins", 900);
+            localStorage.setItem("coins", 900);
+            dispatch(setCoins(900));
+        } else if (updatedCoins !== coins) {
             dispatch(setCoins(updatedCoins));
         }
     }, [location.key, coins, dispatch]);
 
-    // Save coins in session storage and local storage
+    // Save coins in session storage
     useEffect(() => {
         if (coins > 0) {
             sessionStorage.setItem("coins", coins);
-        }
-
-        if (coins === 900) {
-            localStorage.setItem("coins", coins);
+            localStorage.setItem("coins", coins); // Optional for long-term persistence
         }
     }, [coins]);
 
@@ -54,7 +58,7 @@ export default function Navbar() {
     return (
         <div>
             {isSpecialRoute ? (
-                <div className="py-2  navigationbar mb-2 position-fixed top-0 px-2">
+                <div className="py-2 navigationbar mb-2 position-fixed top-0 px-2">
                     <div className="d-flex justify-content-between align-items-center">
                         <div>
                             <Link to="/" className="logo">GamecWebs</Link>
