@@ -15,21 +15,31 @@ import { Provider } from 'react-redux';
 import store from './component/Redux/store';
 
 function App() {
+  const hasVisitedQuiz = localStorage.getItem('hasVisitedQuiz');
   return (
     <div className='container-game'>
       <Provider store={store}>
         <Router>
-          <Navbar></Navbar>
+          <Navbar />
           <Routes>
-            <Route path='/' element={<Quiz></Quiz>}></Route>
-            <Route path='/congrasulation' element={<Congrasulation></Congrasulation>}></Route>
-            <Route path='/tournament' element={<Tournament></Tournament>}></Route>
-            <Route path='/story/:vCatId' element={<Story></Story>}></Route>
-            <Route path='/stories' element={<Stories></Stories>}></Route>
-            <Route path="/rule/:id" element={<Rules></Rules>}></Route>
-            <Route path='/questions/:id' element={<Questions></Questions>}></Route>
-            <Route path='/quiz-analysis' element={<QuizAnalysis></QuizAnalysis>}></Route>
-            <Route path='/game' element={<Game></Game>}></Route>
+            <Route
+              path='/'
+              element={
+                hasVisitedQuiz ? (
+                  <Navigate to="/tournament" replace />
+                ) : (
+                  <Quiz />
+                )
+              }
+            />
+            <Route path='/congrasulation' element={<Congrasulation />} />
+            <Route path='/tournament' element={<Tournament />} />
+            <Route path='/story/:vCatId' element={<Story />} />
+            <Route path='/stories' element={<Stories />} />
+            <Route path="/rule/:id" element={<Rules />} />
+            <Route path='/questions/:id' element={<Questions />} />
+            <Route path='/quiz-analysis' element={<QuizAnalysis />} />
+            <Route path='/game' element={<Game />} />
           </Routes>
         </Router>
       </Provider>

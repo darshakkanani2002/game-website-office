@@ -4,15 +4,19 @@ import { useNavigate } from "react-router-dom";
 import { Img_Url, Test_API } from "../Config";
 
 export default function Quiz() {
-  const [currentQuestion, setCurrentQuestion] = useState(1); // 1 for isStatus: 0, 2 for isStatus: 1
+  const [currentQuestion, setCurrentQuestion] = useState(1);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [images, setImages] = useState([]); // Store fetched images
+  const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  // Fetch images on component mount and on currentQuestion change
   useEffect(() => {
+    // Set the flag in localStorage on initial render
+    if (!localStorage.getItem('hasVisitedQuiz')) {
+      localStorage.setItem('hasVisitedQuiz', 'true');
+    }
+
     fetchImages(currentQuestion === 1 ? 0 : 1);
   }, [currentQuestion]);
 
@@ -23,7 +27,7 @@ export default function Quiz() {
       const data = response?.data?.data;
 
       if (Array.isArray(data)) {
-        setImages(data.map((item) => item.vImage || [])); // Set image URLs, default to an empty array
+        setImages(data.map((item) => item.vImage || []));
       } else {
         console.error("Invalid image data received:", data);
         setImages([]);
@@ -45,10 +49,8 @@ export default function Quiz() {
       setSelectedAnswer(null);
 
       if (currentQuestion === 1) {
-        // Move to second question
         setCurrentQuestion(2);
       } else if (currentQuestion === 2) {
-        // Navigate to congratulations
         navigate("/congrasulation");
       }
     }, 1000);
