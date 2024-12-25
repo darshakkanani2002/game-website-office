@@ -1,35 +1,13 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const TournamentContext = createContext();
 
-export function useTournament() {
-    return useContext(TournamentContext);
-}
-
-export function TournamentProvider({ children }) {
+export const TournamentProvider = ({ children }) => {
     const [liveUsers, setLiveUsers] = useState({});
 
-    // Simulate live user data update on component mount
-    useEffect(() => {
-        // This is where you might connect to a WebSocket or some other real-time service
-        // to update live users.
-        const interval = setInterval(() => {
-            // Example of incrementing live users count for demonstration purposes
-            setLiveUsers((prevLiveUsers) => {
-                const updatedUsers = { ...prevLiveUsers };
-                Object.keys(updatedUsers).forEach((id) => {
-                    updatedUsers[id] = (updatedUsers[id] || 0) + 1; // Increment user count
-                });
-                return updatedUsers;
-            });
-        }, 3000); // Update every 3 seconds for demonstration purposes
-
-        return () => clearInterval(interval);
-    }, []);
-
     const updateLiveUsers = (tournamentId, count) => {
-        setLiveUsers((prevLiveUsers) => ({
-            ...prevLiveUsers,
+        setLiveUsers((prev) => ({
+            ...prev,
             [tournamentId]: count,
         }));
     };
@@ -39,4 +17,7 @@ export function TournamentProvider({ children }) {
             {children}
         </TournamentContext.Provider>
     );
-}
+};
+
+export const useTournament = () => useContext(TournamentContext);
+    

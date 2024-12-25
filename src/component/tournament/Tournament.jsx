@@ -6,27 +6,44 @@ import { Img_Url, Test_API } from '../Config';
 import { useTournament } from '../TournamentProvider';
 
 export default function Tournament() {
-    const { liveUsers, updateLiveUsers } = useTournament(); // Access the context values
-    const [images, setImagesData] = useState([]); // Declare images state
-    const [isLoading, setIsLoading] = useState(true); // Loading state to manage refresh effect
+    const { liveUsers, updateLiveUsers } = useTournament(); // Access context values
+    const [images, setImagesData] = useState([]); // Tournament images data
+    const [isLoading, setIsLoading] = useState(true); // Loading state
 
     useEffect(() => {
-        // Fetch initial data and update images state
+        // Fetch initial tournament data
         fetchData().finally(() => setIsLoading(false));
+
+        // Setup WebSocket for live user updates
+        const socket = new WebSocket("wss://your-websocket-server-url");
+
+        socket.onmessage = (event) => {
+            try {
+                const data = JSON.parse(event.data);
+                const { tournamentId, liveUserCount } = data;
+                // Update live users in context
+                updateLiveUsers(tournamentId, liveUserCount);
+            } catch (error) {
+                console.error("WebSocket message parsing error:", error);
+            }
+        };
+
+        socket.onerror = (error) => {
+            console.error("WebSocket Error:", error);
+        };
+
+        // Cleanup WebSocket connection on component unmount
+        return () => socket.close();
     }, []);
 
     const fetchData = async () => {
         try {
             const response = await axios.post(`${Test_API}question/list`);
-            console.log("Tournament Data ==>", response.data.data);
+            console.log("Tournament Data:", response.data.data);
             setImagesData(Array.isArray(response.data.data) ? response.data.data : []);
         } catch (error) {
-            console.log(error);
+            console.error("Error fetching tournament data:", error);
         }
-    };
-
-    const handleLiveUsersUpdate = (tournamentId, count) => {
-        updateLiveUsers(tournamentId, count);
     };
 
     return (
@@ -37,7 +54,7 @@ export default function Tournament() {
                         <div>
                             <img
                                 src="/public/img/quize-tournament.gif"
-                                alt="game-remoret-ic"
+                                alt="game-remote-ic"
                                 className='img-fluid quize-tournament-img'
                             />
                         </div>
@@ -49,7 +66,7 @@ export default function Tournament() {
                 <div className='container-fluid'>
                     <div className='row'>
                         {isLoading ? (
-                            <p>Loading...</p> // Show loading spinner or message
+                            <p>Loading...</p> // Show loading spinner
                         ) : (
                             images.map((item) => (
                                 <div className='col-4 mb-3' key={item._id}>
@@ -63,7 +80,15 @@ export default function Tournament() {
                                             />
                                             <div className='tournament-lve-text text-center'>
                                                 <p className='mb-0 pb-1 px-3 d-flex align-items-center'>
-                                                    <span><img src="../../../public/img/live.gif" alt="live" className='img-fluid quize-tournament-live-img' /> </span> <br /> <span>{liveUsers[item._id] || 1}</span>
+                                                    <span>
+                                                        <img
+                                                            src="../../../public/img/live.gif"
+                                                            alt="live"
+                                                            className='img-fluid quize-tournament-live-img'
+                                                        />
+                                                    </span>
+                                                    <br />
+                                                    <span>{liveUsers[item._id] || 0}</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -90,7 +115,7 @@ export default function Tournament() {
                                                     </div>
                                                     <div>
                                                         <span className='entry-coin-text'>
-                                                            Entry : {item.iEntry} Coins
+                                                            Entry: {item.iEntry} Coins
                                                         </span>
                                                     </div>
                                                 </div>
