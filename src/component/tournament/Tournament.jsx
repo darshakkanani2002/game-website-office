@@ -69,7 +69,7 @@ export default function Tournament() {
                             <p>Loading...</p> // Show loading spinner
                         ) : (
                             images.map((item) => (
-                                <div className='col-4 mb-3' key={item._id}>
+                                <div className='col-6 col-sm-4 col-md-4 col-lg-4 mb-3' key={item._id}>
                                     <div>
                                         <div className='position-relative'>
                                             <img
@@ -103,7 +103,7 @@ export default function Tournament() {
                                                 143 Users Playing
                                             </p>
                                         </div>
-                                        <div className='d-flex justify-content-between align-items-end'>
+                                        <div className='d-flex justify-content-between align-items-center'>
                                             <div>
                                                 <div className='d-flex'>
                                                     <div className='me-1'>

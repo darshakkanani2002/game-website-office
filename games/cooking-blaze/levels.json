@@ -1,0 +1,1783 @@
+{
+	"1": {
+		"1": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 3,
+			"serveGoal": 3,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 5,
+			"serveGoal": 5,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 7,
+			"serveGoal": 7,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		}
+		
+	},
+	"2": {
+		"1": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 4,
+			"serveGoal": 4,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 8,
+			"serveGoal": 8,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 10,
+			"serveGoal": 10,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		}
+		
+	},
+	"3": {
+		"1": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 7,
+			"serveGoal": 7,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 8,
+			"serveGoal": 8,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 12,
+			"serveGoal": 12,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 1
+			}
+		}
+		
+	},
+	"4": {
+		"1": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 10,
+			"serveGoal": 10,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 5,
+			"serveGoal": 5,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 7,
+			"serveGoal": 7,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 1
+			}
+		}
+		
+	},
+	"5": {
+		"1": {
+			"goalType": "serve",
+			"limitType": "time",
+			"customerCount": 75,
+			"serveGoal": 13,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "serve",
+			"limitType": "time",
+			"customerCount": 80,
+			"serveGoal": 10,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 1
+			}
+		},
+		"3": {
+			"goalType": "serve",
+			"limitType": "time",
+			"customerCount": 80,
+			"serveGoal": 9,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 1
+			}
+		}
+		
+	},
+	"6": {
+		"1": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 12,
+			"serveGoal": 16,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "like",
+			"limitType": "time",
+			"customerCount": 75,
+			"serveGoal": 11,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "like",
+			"limitType": "time",
+			"customerCount": 80,
+			"serveGoal": 12,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		}
+		
+	},
+	"7": {
+		"1": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 12,
+			"serveGoal": 14,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 12,
+			"serveGoal": 16,
+			"restrictions": {
+				"burn": 0,
+				"trash": 1,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "like",
+			"limitType": "time",
+			"customerCount": 65,
+			"serveGoal": 8,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		}
+		
+	},
+	"8": {
+		"1": {
+			"goalType": "score",
+			"limitType": "customer",
+			"customerCount": 10,
+			"serveGoal": 650,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "score",
+			"limitType": "customer",
+			"customerCount": 10,
+			"serveGoal": 1050,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "score",
+			"limitType": "customer",
+			"customerCount": 10,
+			"serveGoal": 1100,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		}
+		
+	},
+		"9": {
+			"1": {
+				"goalType": "serve",
+				"limitType": "customer",
+				"customerCount": 12,
+				"serveGoal": 16,
+				"restrictions": {
+					"burn": 0,
+					"trash": 0,
+					"unsatisfied": 0
+				}
+			},
+			"2": {
+				"goalType": "serve",
+				"limitType": "customer",
+				"customerCount": 13,
+				"serveGoal": 23,
+				"restrictions": {
+					"burn": 0,
+					"trash": 0,
+					"unsatisfied": 1
+				}
+			},
+			"3": {
+				"goalType": "score",
+				"limitType": "time",
+				"customerCount": 80,
+				"serveGoal": 1950,
+				"restrictions": {
+					"burn": 1,
+					"trash": 0,
+					"unsatisfied": 0
+				}
+			}
+		
+	},
+	"10": {
+		"1": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 13,
+			"serveGoal": 20,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 14,
+			"serveGoal": 14,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "score",
+			"limitType": "time",
+			"customerCount": 90,
+			"serveGoal": 2460,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		}
+		
+	},
+		"11": {
+			"1": {
+				"goalType": "serve",
+				"limitType": "time",
+				"customerCount": 95,
+				"serveGoal": 25,
+				"restrictions": {
+					"burn": 0,
+					"trash": 0,
+					"unsatisfied": 0
+				}
+			},
+			"2": {
+				"goalType": "score",
+				"limitType": "time",
+				"customerCount": 85,
+				"serveGoal": 2380,
+				"restrictions": {
+					"burn": 0,
+					"trash": 0,
+					"unsatisfied": 1
+				}
+			},
+			"3": {
+				"goalType": "serve",
+				"limitType": "customer",
+				"customerCount": 22,
+				"serveGoal": 27,
+				"restrictions": {
+					"burn": 0,
+					"trash": 1,
+					"unsatisfied": 0
+				}
+			}
+		
+	},
+		"12": {
+				"1": {
+					"goalType": "serve",
+					"limitType": "customer",
+					"customerCount": 19,
+					"serveGoal": 27,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 85,
+					"serveGoal": 11,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 90,
+					"serveGoal": 12,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				}
+
+		},
+		"13": {
+				"1": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 100,
+					"serveGoal": 1650,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 80,
+					"serveGoal": 2320,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 85,
+					"serveGoal": 23,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				}
+
+		},
+		"14": {
+				"1": {
+					"goalType": "serve",
+					"limitType": "customer",
+					"customerCount": 12,
+					"serveGoal": 17,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 75,
+					"serveGoal": 10,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 80,
+					"serveGoal": 11,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				}
+
+		},
+		"15": {
+				"1": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 75,
+					"serveGoal": 1940,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "serve",
+					"limitType": "customer",
+					"customerCount": 18,
+					"serveGoal": 28,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 90,
+					"serveGoal": 3600,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				}
+
+		},
+			"16": {
+				"1": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 70,
+					"serveGoal": 2015,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "serve",
+					"limitType": "customer",
+					"customerCount": 24,
+					"serveGoal": 32,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				},
+				"3": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 65,
+					"serveGoal": 21,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				}
+		},
+		"17": {
+				"1": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 80,
+					"serveGoal": 10,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 90,
+					"serveGoal": 12,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 90,
+					"serveGoal": 4260,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				}
+		},
+		"18": {
+				"1": {
+					"goalType": "like",
+					"limitType": "customer",
+					"customerCount": 19,
+					"serveGoal": 17,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 95,
+					"serveGoal": 3850,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 80,
+					"serveGoal": 4410,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				}
+		},
+			"19": {
+				"1": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 70,
+					"serveGoal": 22,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 70,
+					"serveGoal": 22,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "like",
+					"limitType": "customer",
+					"customerCount": 17,
+					"serveGoal": 17,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				}
+		},
+		"20": {
+				"1": {
+					"goalType": "like",
+					"limitType": "customer",
+					"customerCount": 12,
+					"serveGoal": 10,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 95,
+					"serveGoal": 6000,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				},
+				"3": {
+					"goalType": "like",
+					"limitType": "customer",
+					"customerCount": 19,
+					"serveGoal": 19,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				}
+		},
+		"21": {
+				"1": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 100,
+					"serveGoal": 12,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 110,
+					"serveGoal": 16,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 105,
+					"serveGoal": 8500,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				}
+		},
+		"22": {
+				"1": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 85,
+					"serveGoal": 3885,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 80,
+					"serveGoal": 33,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 90,
+					"serveGoal": 8920,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				}
+		},
+		"23": {
+				"1": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 105,
+					"serveGoal": 42,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				},
+				"2": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 100,
+					"serveGoal": 8500,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 100,
+					"serveGoal": 43,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				}
+		},
+		"24": {
+				"1": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 95,
+					"serveGoal": 39,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 110,
+					"serveGoal": 10500,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 115,
+					"serveGoal": 15240,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				}
+		},
+		"25": {
+				"1": {
+					"goalType": "serve",
+					"limitType": "customer",
+					"customerCount": 22,
+					"serveGoal": 37,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 120,
+					"serveGoal": 20,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 115,
+					"serveGoal": 13820,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				}
+		},
+		"26": {
+		"1": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 3,
+			"serveGoal": 3,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 5,
+			"serveGoal": 5,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 7,
+			"serveGoal": 7,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		}
+		
+	},
+	"27": {
+		"1": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 4,
+			"serveGoal": 4,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 8,
+			"serveGoal": 8,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 10,
+			"serveGoal": 10,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		}
+		
+	},
+	"28": {
+		"1": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 7,
+			"serveGoal": 7,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 8,
+			"serveGoal": 8,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 12,
+			"serveGoal": 12,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 1
+			}
+		}
+		
+	},
+	"29": {
+		"1": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 10,
+			"serveGoal": 10,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 5,
+			"serveGoal": 5,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 7,
+			"serveGoal": 7,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 1
+			}
+		}
+		
+	},
+	"30": {
+		"1": {
+			"goalType": "serve",
+			"limitType": "time",
+			"customerCount": 75,
+			"serveGoal": 13,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "serve",
+			"limitType": "time",
+			"customerCount": 80,
+			"serveGoal": 10,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 1
+			}
+		},
+		"3": {
+			"goalType": "serve",
+			"limitType": "time",
+			"customerCount": 80,
+			"serveGoal": 9,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 1
+			}
+		}
+		
+	},
+	"31": {
+		"1": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 12,
+			"serveGoal": 16,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "like",
+			"limitType": "time",
+			"customerCount": 75,
+			"serveGoal": 11,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "like",
+			"limitType": "time",
+			"customerCount": 80,
+			"serveGoal": 12,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		}
+		
+	},
+	"32": {
+		"1": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 12,
+			"serveGoal": 14,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 12,
+			"serveGoal": 16,
+			"restrictions": {
+				"burn": 0,
+				"trash": 1,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "like",
+			"limitType": "time",
+			"customerCount": 65,
+			"serveGoal": 8,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		}
+		
+	},
+	"33": {
+		"1": {
+			"goalType": "score",
+			"limitType": "customer",
+			"customerCount": 10,
+			"serveGoal": 650,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "score",
+			"limitType": "customer",
+			"customerCount": 10,
+			"serveGoal": 1050,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "score",
+			"limitType": "customer",
+			"customerCount": 10,
+			"serveGoal": 1100,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		}
+		
+	},
+		"34": {
+			"1": {
+				"goalType": "serve",
+				"limitType": "customer",
+				"customerCount": 12,
+				"serveGoal": 16,
+				"restrictions": {
+					"burn": 0,
+					"trash": 0,
+					"unsatisfied": 0
+				}
+			},
+			"2": {
+				"goalType": "serve",
+				"limitType": "customer",
+				"customerCount": 13,
+				"serveGoal": 23,
+				"restrictions": {
+					"burn": 0,
+					"trash": 0,
+					"unsatisfied": 1
+				}
+			},
+			"3": {
+				"goalType": "score",
+				"limitType": "time",
+				"customerCount": 80,
+				"serveGoal": 1900,
+				"restrictions": {
+					"burn": 1,
+					"trash": 0,
+					"unsatisfied": 0
+				}
+			}
+		
+	},
+	"35": {
+		"1": {
+			"goalType": "serve",
+			"limitType": "customer",
+			"customerCount": 13,
+			"serveGoal": 20,
+			"restrictions": {
+				"burn": 0,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"2": {
+			"goalType": "like",
+			"limitType": "customer",
+			"customerCount": 14,
+			"serveGoal": 14,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		},
+		"3": {
+			"goalType": "score",
+			"limitType": "time",
+			"customerCount": 90,
+			"serveGoal": 2460,
+			"restrictions": {
+				"burn": 1,
+				"trash": 0,
+				"unsatisfied": 0
+			}
+		}
+		
+	},
+		"36": {
+			"1": {
+				"goalType": "serve",
+				"limitType": "time",
+				"customerCount": 95,
+				"serveGoal": 25,
+				"restrictions": {
+					"burn": 0,
+					"trash": 0,
+					"unsatisfied": 0
+				}
+			},
+			"2": {
+				"goalType": "score",
+				"limitType": "time",
+				"customerCount": 85,
+				"serveGoal": 2400,
+				"restrictions": {
+					"burn": 0,
+					"trash": 0,
+					"unsatisfied": 1
+				}
+			},
+			"3": {
+				"goalType": "serve",
+				"limitType": "customer",
+				"customerCount": 22,
+				"serveGoal": 27,
+				"restrictions": {
+					"burn": 0,
+					"trash": 1,
+					"unsatisfied": 0
+				}
+			}
+		
+	},
+		"37": {
+				"1": {
+					"goalType": "serve",
+					"limitType": "customer",
+					"customerCount": 19,
+					"serveGoal": 27,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 85,
+					"serveGoal": 11,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 90,
+					"serveGoal": 12,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				}
+
+		},
+		"38": {
+				"1": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 100,
+					"serveGoal": 1960,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 80,
+					"serveGoal": 2320,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 85,
+					"serveGoal": 23,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				}
+
+		},
+		"39": {
+				"1": {
+					"goalType": "serve",
+					"limitType": "customer",
+					"customerCount": 12,
+					"serveGoal": 17,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 75,
+					"serveGoal": 10,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 80,
+					"serveGoal": 11,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				}
+
+		},
+		"40": {
+				"1": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 75,
+					"serveGoal": 1940,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "serve",
+					"limitType": "customer",
+					"customerCount": 18,
+					"serveGoal": 28,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 90,
+					"serveGoal": 3600,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				}
+
+		},
+			"41": {
+				"1": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 70,
+					"serveGoal": 4030,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "serve",
+					"limitType": "customer",
+					"customerCount": 24,
+					"serveGoal": 32,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				},
+				"3": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 21,
+					"serveGoal": 65,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				}
+		},
+		"42": {
+				"1": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 80,
+					"serveGoal": 10,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 90,
+					"serveGoal": 12,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 90,
+					"serveGoal": 4260,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				}
+		},
+		"43": {
+				"1": {
+					"goalType": "like",
+					"limitType": "customer",
+					"customerCount": 19,
+					"serveGoal": 17,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 95,
+					"serveGoal": 7700,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 80,
+					"serveGoal": 4410,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				}
+		},
+			"44": {
+				"1": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 70,
+					"serveGoal": 22,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 70,
+					"serveGoal": 22,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "like",
+					"limitType": "customer",
+					"customerCount": 17,
+					"serveGoal": 17,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				}
+		},
+		"45": {
+				"1": {
+					"goalType": "like",
+					"limitType": "customer",
+					"customerCount": 12,
+					"serveGoal": 10,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 95,
+					"serveGoal": 12000,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				},
+				"3": {
+					"goalType": "like",
+					"limitType": "customer",
+					"customerCount": 19,
+					"serveGoal": 19,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				}
+		},
+		"46": {
+				"1": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 100,
+					"serveGoal": 12,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 110,
+					"serveGoal": 16,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 105,
+					"serveGoal": 9500,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				}
+		},
+		"47": {
+				"1": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 85,
+					"serveGoal": 5000,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 80,
+					"serveGoal": 33,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 90,
+					"serveGoal": 4460,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				}
+		},
+		"48": {
+				"1": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 105,
+					"serveGoal": 42,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				},
+				"2": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 100,
+					"serveGoal": 9000,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 100,
+					"serveGoal": 43,
+					"restrictions": {
+						"burn": 0,
+						"trash": 1,
+						"unsatisfied": 0
+					}
+				}
+		},
+		"49": {
+				"1": {
+					"goalType": "serve",
+					"limitType": "time",
+					"customerCount": 95,
+					"serveGoal": 39,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 110,
+					"serveGoal": 10500,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 115,
+					"serveGoal": 15240,
+					"restrictions": {
+						"burn": 0,
+						"trash": 0,
+						"unsatisfied": 1
+					}
+				}
+		},
+		"50": {
+				"1": {
+					"goalType": "serve",
+					"limitType": "customer",
+					"customerCount": 22,
+					"serveGoal": 37,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"2": {
+					"goalType": "like",
+					"limitType": "time",
+					"customerCount": 120,
+					"serveGoal": 20,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				},
+				"3": {
+					"goalType": "score",
+					"limitType": "time",
+					"customerCount": 115,
+					"serveGoal": 13820,
+					"restrictions": {
+						"burn": 1,
+						"trash": 0,
+						"unsatisfied": 0
+					}
+				}
+		}
+	
+}

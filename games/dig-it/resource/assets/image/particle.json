@@ -1,0 +1,15 @@
+{"file":"particle.png","frames":{
+"texiaocolor2_png":{"x":85,"y":1,"w":40,"h":12,"offX":0,"offY":0,"sourceW":40,"sourceH":12},
+"texiaocolor3_png":{"x":43,"y":1,"w":40,"h":12,"offX":0,"offY":0,"sourceW":40,"sourceH":12},
+"texiaocolor1_png":{"x":1,"y":1,"w":40,"h":16,"offX":0,"offY":0,"sourceW":40,"sourceH":16},
+"texiaohero8_png":{"x":1,"y":19,"w":14,"h":23,"offX":0,"offY":0,"sourceW":14,"sourceH":24},
+"texiaohero9_png":{"x":17,"y":19,"w":13,"h":24,"offX":1,"offY":0,"sourceW":14,"sourceH":24},
+"texiao2_png":{"x":65,"y":15,"w":18,"h":20,"offX":1,"offY":0,"sourceW":20,"sourceH":20},
+"texiaohero4_png":{"x":64,"y":37,"w":14,"h":19,"offX":0,"offY":2,"sourceW":14,"sourceH":24},
+"texiaohero5_png":{"x":48,"y":36,"w":14,"h":19,"offX":0,"offY":0,"sourceW":16,"sourceH":20},
+"texiao1_png":{"x":43,"y":15,"w":20,"h":19,"offX":0,"offY":1,"sourceW":20,"sourceH":20},
+"texiaohero7_png":{"x":101,"y":15,"w":14,"h":23,"offX":0,"offY":0,"sourceW":14,"sourceH":24},
+"texiaohero6_png":{"x":85,"y":15,"w":14,"h":23,"offX":0,"offY":0,"sourceW":14,"sourceH":24},
+"texiaohero2_png":{"x":80,"y":40,"w":14,"h":19,"offX":0,"offY":2,"sourceW":14,"sourceH":24},
+"texiaohero3_png":{"x":96,"y":40,"w":14,"h":19,"offX":0,"offY":2,"sourceW":14,"sourceH":24},
+"texiaohero1_png":{"x":32,"y":36,"w":14,"h":22,"offX":0,"offY":0,"sourceW":14,"sourceH":22}}}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gold Miner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <meta name="generator" content="Construct 3">
+
+    <link rel="manifest" href="appmanifest.json">
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
+    <link rel="icon" type="image/png" href="icons/icon-512.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script async data-ad-client="ad-test_id" data-ad-frequency-hint="30s" data-page-url="namogames.com" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    </script>
+
+    <script type="text/javascript">
+        window.adsbygoogle = window.adsbygoogle || [];
+        const adBreak = adConfig = function(o) {
+            adsbygoogle.push(o);
+        }
+
+        adConfig({
+            sound: 'on',
+            preloadAdBreaks: 'on'
+        });
+
+
+        function ShowInterstitial_Preroll() {
+
+            adBreak({
+                //types: https://developers.google.com/ad-placement/docs/placement-types?hl=en
+                type: 'preroll',
+                name: 'game_preroll',
+                adBreakDone: (info) => {
+                    // Log the preroll result to better understand the break status even when an ad is not shown.
+                    console.log(`Interstitial result: ${info.breakStatus}`);
+                }
+            });
+        }
+
+        function ShowInterstitial_Next() {
+
+            adBreak({
+                //types: https://developers.google.com/ad-placement/docs/placement-types?hl=en
+                type: 'next',
+                name: 'game_preroll',
+                adBreakDone: (info) => {
+                    // Log the preroll result to better understand the break status even when an ad is not shown.
+                    console.log(`Interstitial result: ${info.breakStatus}`);
+                }
+            });
+        }
+
+
+        function ShowRewarded() {
+            adBreak({
+                type: 'reward',
+                name: 'show_rewarded',
+                beforeAd: () => {
+                    //console.log("before ad");
+                },
+                afterAd: () => {
+                    //console.log("after ad");
+                },
+                beforeReward: (showAdFn) => {
+                    const r = confirm('Watch this video to get one more chance?');
+                    if (r) {
+                        console.log("rewarded ad confirmed.");
+                        showAdFn();
+                    } else {
+                        console.log("rewarded ad NOT confirmed.");
+                    }
+                },
+                adDismissed: () => {
+                    console.log("rewarded ad dismissed");
+                },
+                adViewed: () => {
+                    console.log("rewarded ad viewed");
+
+                }
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <noscript>
+		<div id="notSupportedWrap">
+			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
+			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+		</div>
+	</noscript>
+    <script src="scripts/supportcheck.js"></script>
+    <script src="scripts/offlineclient.js" type="module"></script>
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/register-sw.js" type="module"></script>
+
+</body>
+
+</html>

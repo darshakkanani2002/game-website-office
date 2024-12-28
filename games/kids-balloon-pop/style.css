@@ -1,0 +1,20 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #000000;
+    color: white;
+}
+
+html,
+body,
+canvas {
+    touch-action: none;
+    touch-action-delay: none;
+}
+
+@font-face {
+    font-family: '12250';
+    src: url('fonts/12250.ttf') format('truetype');
+}

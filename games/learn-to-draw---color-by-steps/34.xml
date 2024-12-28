@@ -1,0 +1,28 @@
+<?xml version='1.0' ?>
+<demgam>
+
+<name>heart</name>
+
+<start_point x_tile='7' y_tile='17'></start_point>
+<decor frame='0' x_tile='13' y_tile='11'></decor>
+
+<draw step='0' dist='1' dir='225'></draw>
+<draw step='1' dist='2' dir='90'></draw>
+<draw step='2' dist='2' dir='0'></draw>
+<draw step='3' dist='1' dir='225'></draw>
+<draw step='4' dist='2' dir='315'></draw>
+<draw step='5' dist='5' dir='225'></draw>
+<draw step='6' dist='3' dir='270'></draw>
+<draw step='7' dist='2' dir='315'></draw>
+<draw step='8' dist='3' dir='0'></draw>
+<draw step='9' dist='3' dir='45'></draw>
+<draw step='10' dist='3' dir='315'></draw>
+<draw step='11' dist='3' dir='0'></draw>
+<draw step='12' dist='2' dir='45'></draw>
+<draw step='13' dist='3' dir='90'></draw>
+<draw step='14' dist='8' dir='135'></draw>
+<draw step='15' dist='3' dir='225'></draw>
+<draw step='16' dist='fin' dir='0'></draw>
+
+</demgam>
+

@@ -1,0 +1,27 @@
+<font>
+	<info face="C:\wamp\www\crazyMath\assets\Numbers-export" size="80" />
+	<common lineHeight="80" scaleW="269" scaleH="263" pages="1" />
+	<pages>
+		<page id="0" file="C:\wamp\www\crazyMath\assets\Numbers-export.png" />
+	</pages>
+	<chars count="16">
+		<char id="43" x="0" y="0" width="61" height="60" xoffset="0" yoffset="0" xadvance="62" /><!-- + -->
+		<char id="45" x="62" y="38" width="31" height="17" xoffset="0" yoffset="23" xadvance="32" /><!-- - -->
+		<char id="48" x="56" y="162" width="52" height="100" xoffset="0" yoffset="-20" xadvance="53" /><!-- 0 -->
+		<char id="49" x="209" y="101" width="36" height="100" xoffset="0" yoffset="-20" xadvance="37" /><!-- 1 -->
+		<char id="50" x="161" y="139" width="47" height="100" xoffset="0" yoffset="-20" xadvance="48" /><!-- 2 -->
+		<char id="51" x="209" y="0" width="44" height="100" xoffset="0" yoffset="-20" xadvance="45" /><!-- 3 -->
+		<char id="52" x="0" y="61" width="57" height="100" xoffset="0" yoffset="-20" xadvance="58" /><!-- 4 -->
+		<char id="53" x="162" y="0" width="46" height="100" xoffset="0" yoffset="-20" xadvance="47" /><!-- 5 -->
+		<char id="54" x="109" y="162" width="51" height="100" xoffset="0" yoffset="-20" xadvance="52" /><!-- 6 -->
+		<char id="55" x="110" y="38" width="51" height="100" xoffset="0" yoffset="-20" xadvance="52" /><!-- 7 -->
+		<char id="56" x="0" y="162" width="55" height="100" xoffset="0" yoffset="-20" xadvance="56" /><!-- 8 -->
+		<char id="57" x="58" y="61" width="51" height="100" xoffset="0" yoffset="-20" xadvance="52" /><!-- 9 -->
+		<char id="61" x="62" y="0" width="51" height="37" xoffset="0" yoffset="11" xadvance="52" /><!-- = -->
+		<char id="58" x="246" y="101" width="22" height="72" xoffset="0" yoffset="8" xadvance="23" /><!-- : -->
+		<char id="32" x="0" y="0" width="0" height="0" xoffset="0" yoffset="0" xadvance="20" /><!--   -->
+		<char id="9" x="0" y="0" width="0" height="0" xoffset="0" yoffset="0" xadvance="160" /><!-- 	 -->
+	</chars>
+	<kernings count="0">
+	</kernings>
+</font>

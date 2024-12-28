@@ -1,0 +1,52 @@
+<?xml version='1.0' ?>
+<demgam>
+
+<name>steamship</name>
+
+<start_point x_tile='9' y_tile='14'></start_point>
+<decor frame='0' x_tile='17' y_tile='15'></decor>
+
+<draw step='0' dist='1' dir='0'></draw>
+<draw step='1' dist='1' dir='315'></draw>
+<draw step='2' dist='1' dir='90'></draw>
+<draw step='3' dist='1' dir='135'></draw>
+<draw step='4' dist='2' dir='180'></draw>
+<draw step='5' dist='1' dir='225'></draw>
+<draw step='6' dist='1' dir='270'></draw>
+<draw step='7' dist='1' dir='45'></draw>
+<draw step='8' dist='1' dir='0'></draw>
+<draw step='9' dist='3' dir='270'></draw>
+<draw step='10' dist='1' dir='45'></draw>
+<draw step='11' dist='1' dir='135'></draw>
+<draw step='12' dist='1' dir='225'></draw>
+<draw step='13' dist='1' dir='315'></draw>
+<draw step='14' dist='1' dir='270'></draw>
+<draw step='15' dist='1' dir='0'></draw>
+<draw step='16' dist='2' dir='45'></draw>
+<draw step='17' dist='9' dir='0'></draw>
+<draw step='18' dist='3' dir='90'></draw>
+<draw step='19' dist='1' dir='135'></draw>
+<draw step='20' dist='2' dir='90'></draw>
+<draw step='21' dist='1' dir='135'></draw>
+<draw step='22' dist='10' dir='180'></draw>
+<draw step='23' dist='3' dir='225'></draw>
+<draw step='24' dist='1' dir='270'></draw>
+<draw step='25' dist='2' dir='225'></draw>
+<draw step='26' dist='1' dir='270'></draw>
+<draw step='27' dist='2' dir='225'></draw>
+<draw step='28' dist='7' dir='0'></draw>
+<draw step='29' dist='1' dir='270'></draw>
+<draw step='30' dist='2' dir='0'></draw>
+<draw step='31' dist='2' dir='270'></draw>
+<draw step='32' dist='2' dir='0'></draw>
+<draw step='33' dist='3' dir='270'></draw>
+<draw step='34' dist='3' dir='0'></draw>
+<draw step='35' dist='3' dir='90'></draw>
+<draw step='36' dist='2' dir='0'></draw>
+<draw step='37' dist='2' dir='90'></draw>
+<draw step='38' dist='2' dir='0'></draw>
+<draw step='39' dist='3' dir='90'></draw>
+<draw step='40' dist='fin' dir='0'></draw>
+
+</demgam>
+
