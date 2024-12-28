@@ -45,7 +45,7 @@ export default function Stories() {
                     <div className="container-fluid">
                         <div className="row align-items-start">
                             {/* Sidebar with category buttons */}
-                            <div className="col-4 position-sticky ps-1 pe-1 py-2 bg-white nav-tabs-position">
+                            <div className="col-lg-4 col-12 position-sticky ps-1 pe-1 py-2 bg-white nav-tabs-position">
                                 <div className="">
                                     <div
                                         className="nav flex-column nav-pills me-3"
@@ -56,7 +56,7 @@ export default function Stories() {
                                         {categories.map((category) => (
                                             <button
                                                 key={category._id}
-                                                className={`nav-link py-3 text-start ${selectedCategory === category._id ? "active" : ""}`}
+                                                className={`nav-link py-3 text-start d-flex align-items-center ${selectedCategory === category._id ? "active" : ""}`}
                                                 onClick={() => setSelectedCategory(category._id)}
                                                 role="tab"
                                                 aria-selected={selectedCategory === category._id}
@@ -78,7 +78,7 @@ export default function Stories() {
 
 
                             {/* Stories content */}
-                            <div className="col-8 story-margin">
+                            <div className="col-lg-8 col-12 story-margin">
                                 <div
                                     className="tab-content"
                                     id="v-pills-tabContent"

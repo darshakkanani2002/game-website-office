@@ -817,3 +817,51 @@ body.dark-mode {
 .story-back-gif {
   width: 40px;
 }
+
+@media (max-width:425px) {
+  .navigationbar {
+    min-width: 425px;
+  }
+
+}
+
+@media (max-width:375px) {
+  .navigationbar {
+    min-width: 375px;
+  }
+
+}
+
+@media (max-width:320px) {
+  .navigationbar {
+    min-width: 320px;
+  }
+
+  .tournament-play-btn {
+    background-color: #FF4600;
+    border: 1px solid #FF4600;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 10px;
+    padding: 2px 7px;
+  }
+
+  .entry-coin-text {
+    font-size: 7px;
+  }
+
+  .game-name-btn span {
+    font-size: 7px;
+  }
+
+  .logo {
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .navbar-coins {
+    font-size: 10px;
+  }
+}
