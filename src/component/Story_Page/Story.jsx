@@ -11,11 +11,11 @@ import { Img_Url, Test_API } from '../Config';
 export default function Story() {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
-  const swiperRef = useRef(null); // Ref for the Swiper instance
+  const swiperRef = useRef(null);
   const navigate = useNavigate();
 
   const [images, setImages] = useState([]);
-  const { vCatId } = useParams(); // Get vCatId from the URL
+  const { vCatId } = useParams();
 
   const onAutoplayTimeLeft = (swiper, time, progress) => {
     if (progressCircle.current) {
@@ -26,19 +26,25 @@ export default function Story() {
     }
   };
 
-  // Fetch story data when vCatId changes
   useEffect(() => {
     if (vCatId) {
+      setImages([]); // Clear previous images
       fetchData(vCatId);
     }
   }, [vCatId]);
 
   const fetchData = async (vCatId) => {
     try {
+      if (swiperRef.current?.swiper) {
+        swiperRef.current.swiper.autoplay.stop(); // Stop autoplay during fetch
+      }
       const payload = { vCatId };
       const response = await axios.post(`${Test_API}story/list`, payload);
       const imageData = response.data.data;
       setImages(imageData);
+      if (swiperRef.current?.swiper) {
+        swiperRef.current.swiper.autoplay.start(); // Restart autoplay after fetch
+      }
     } catch (error) {
       console.error('Error fetching story data:', error);
     }
@@ -48,21 +54,14 @@ export default function Story() {
     navigate('/stories');
   };
 
-  // Restart autoplay when images are updated or when Swiper is re-initialized
-  useEffect(() => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.autoplay.start();
-    }
-  }, [images]);
-
   return (
     <div className="content-padding pb-0">
       <div className="background-height-bg overflow-hidden">
         <div className="row justify-content-center">
-          <div className="col-7 position-relative">
+          <div className="col-lg-9 col-md-11 col-sm-11 col-11 position-relative">
             <Swiper
-              ref={swiperRef} // Attach Swiper reference
-              key={vCatId} // Ensure Swiper is reinitialized when vCatId changes
+              ref={swiperRef}
+              key={vCatId} // Reinitialize Swiper on vCatId change
               className="mySwiper position-relative"
               spaceBetween={30}
               centeredSlides={true}

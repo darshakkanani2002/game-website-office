@@ -8,7 +8,9 @@ export default function Rules() {
     const [images, setImagesData] = useState([]);
     const { id } = useParams(); // Get the ID from the URL parameter
     const [currentBalance, setCurrentBalance] = useState(0);
-    const [showModal, setShowModal] = useState(false); // State for modal visibility
+    const [showModal, setShowModal] = useState(false); // State for insufficient coins modal
+    const [showDeductionModal, setShowDeductionModal] = useState(false); // State for coins deduction modal
+    const [entryFee, setEntryFee] = useState(0); // Store entry fee temporarily
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -40,21 +42,30 @@ export default function Rules() {
 
     const handleStartTournament = (entryFee) => {
         if (currentBalance >= entryFee) {
-            const updatedBalance = currentBalance - entryFee;
-            setCurrentBalance(updatedBalance);
-            sessionStorage.setItem("coins", updatedBalance);
-            alert(`Tournament started! ${entryFee} coins have been deducted.`);
-            navigate(`/questions/${id}`);
+            setEntryFee(entryFee); // Store the entry fee in state
+            setShowDeductionModal(true); // Show the coins deduction modal
         } else {
-            setShowModal(true); // Show the modal
+            setShowModal(true); // Show the insufficient coins modal
         }
     };
 
     const handleCloseModal = (redirectToGame = false) => {
-        setShowModal(false); // Close the modal
+        setShowModal(false); // Close the insufficient coins modal
         if (redirectToGame) {
             navigate("/game"); // Redirect to the "game" route
         }
+    };
+
+    const handleProceedToTournament = () => {
+        const updatedBalance = currentBalance - entryFee;
+        setCurrentBalance(updatedBalance);
+        sessionStorage.setItem("coins", updatedBalance);
+        setShowDeductionModal(false); // Close the modal
+        navigate(`/questions/${id}`); // Navigate to the questions page
+    };
+
+    const handleCancelDeductionModal = () => {
+        setShowDeductionModal(false); // Close the coins deduction modal without deducting coins
     };
 
     return (
@@ -165,6 +176,26 @@ export default function Rules() {
                     </Button>
                     <Button className="earn-coin-modal-btn" onClick={() => handleCloseModal(true)}>
                         Earn Coins
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
+            {/* Modal for coins deducted */}
+            <Modal show={showDeductionModal} onHide={handleCancelDeductionModal} centered>
+                <Modal.Header closeButton>
+                    <Modal.Title className="text-black">Tournament Started</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p className="text-black">
+                        {entryFee} coins will be deducted as the entry fee. Best of luck!
+                    </p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCancelDeductionModal}>
+                        Cancel
+                    </Button>
+                    <Button variant="primary" onClick={handleProceedToTournament}>
+                        Proceed to Tournament
                     </Button>
                 </Modal.Footer>
             </Modal>
